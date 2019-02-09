@@ -1,7 +1,7 @@
 // Copyright © 2019 Yoshiki Shibata. All rights reserved.
 
 // Package frcache provides a cache system which caches the lastest result of
-// a supplied functions. The supplied function may return different values
+// a supplied function. The supplied function may return different values
 // when it is called.
 package frcache
 
@@ -66,7 +66,7 @@ func (fc *FRCache) Get() interface{} {
 	return <-getChan
 }
 
-// Stop stops the periodical calls. Note that after Stop() is called, then
+// Stop stops the periodical calls. Note that after Stop() is called,
 // Get() will panic.
 func (fc *FRCache) Stop() {
 	close(fc.getRequestChan)
